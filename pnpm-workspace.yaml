@@ -15,6 +15,9 @@ packages:
   - python/sdk-runtime
 
 overrides:
+  # SDK 1.31.0 supports Hono 2.x; avoid retaining its vulnerable 1.x lock entry.
+  '@modelcontextprotocol/sdk@1.31.0>@hono/node-server': 2.1.7
+  '@modelcontextprotocol/sdk@1.31.0>hono': 4.13.18
   'extract-zip>yauzl': '3.4.0'
   '@deepseek-ai/cosmokit': 'link:vendor/cosmokit'
   '@deepseek-ai/schemastery': 'link:vendor/schemastery'
